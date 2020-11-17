@@ -18,7 +18,7 @@ def get_models(revised=False):
     cnn_url = "https://drive.google.com/uc?export=download&id=12MgZBpQ0N7suHnNecVMj_ae9zYqbjAhF"
     cnn_path = "{}/age_detect_cnn_model_default.h5".format(models_dir)
     if revised:
-        cnn_url = "https://drive.google.com/uc?export=download&id=10uKYiijM_ML4l6jlYOKbnIwvo9EjSz2_"
+        cnn_url = "https://drive.google.com/uc?export=download&id=10leKQDcC7grQLRaO77i4NEY_uS-3TUXy"
         cnn_path = "{}/age_detect_cnn_model_revised.h5".format(models_dir)
 
     face_detector_url = "https://drive.google.com/uc?export=download&id=1Gcz4wc8iA1SHfV9REcK4i74Tf9vaETq7"

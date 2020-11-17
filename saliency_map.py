@@ -110,9 +110,12 @@ def save_image_info(img, saliency_maps, face_imgs, preds, img_dir):
                     cv2.imwrite("{}/{}.jpg".format(trans_dir, name), ar)
 
 
-def main():
+def main(revised=True):
     #set up models
-    age_ranges = ['1-2', '3-9', '10-20', '21-27', '28-45', '46-65', '66-116']
+    if revised:
+        age_ranges = ['0-9', '10-19', '20-29', '30-39', '40-49', '50-59', '60-116']
+    else:
+        age_ranges = ['1-2', '3-9', '10-20', '21-27', '28-45', '46-65', '66-116']
     model, face_cascade = utils.get_models(revised=True)
     print("\n")
 
@@ -154,4 +157,5 @@ def main():
             print(repr(e))
 
 if __name__ == '__main__':
-    main()
+    main(revised=True)
+
