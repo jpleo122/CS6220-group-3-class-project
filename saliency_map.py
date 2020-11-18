@@ -32,7 +32,7 @@ def intensity_map(gradients):
 def squared_intensity_map(gradients):
     func_name = "squared_intensity_map"
     temp = np.abs(gradients)
-    temp *= temp
+    temp = temp * temp
     high = np.amax(temp)
     temp = (temp / high) * 255
     return temp, func_name
