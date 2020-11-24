@@ -19,13 +19,14 @@ See output in ./output
 
 Output is formatted like so:
 
+```
 ./output
-    Images
-        Predicted Image
-        faces (one folder for each face)
-            greyscale face
-            transformations
-                predicted age range saliency map
-                other age range saliency maps
-
+    ->Images
+    -> Predicted Image
+    -> faces (one folder for each face)
+        -> greyscale face
+        -> transformations
+            -> predicted age range saliency map
+            -> other age range saliency maps
+```
 
