@@ -123,11 +123,8 @@ def get_prediction_and_gradients(img_path, age_ranges, model, face_cascade):
             output = model(model_input)
             face_age = age_ranges[np.argmax(output)]
             face_age_pct = f"({round(np.max(model.predict(face_roi))*100, 2)}%)"
-            print("probs:", output)
-            print("softmax:", tf.nn.softmax(output, axis=-1))
             for idx in range(len(age_ranges)):
                 probs = tf.nn.softmax(output, axis=-1)[:, idx]
-
                 #compute gradients for input and reshape gradients array to be 200 x 200
                 #can use face_roi shape because gradients are same shape as input image
                 gradients = tape.gradient(probs, model_input).numpy().reshape(face_roi.shape[1:3])

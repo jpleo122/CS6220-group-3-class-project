@@ -29,14 +29,6 @@ def intensity_map(gradients):
     temp = (temp / high) * 255
     return temp, func_name
 
-def squared_intensity_map(gradients):
-    func_name = "squared_intensity_map"
-    temp = np.abs(gradients)
-    temp = temp * temp
-    high = np.amax(temp)
-    temp = (temp / high) * 255
-    return temp, func_name
-
 def binary_map_grad_median(gradients):
     func_name = "binary_map_grad_median"
     temp = np.abs(gradients)
@@ -44,16 +36,24 @@ def binary_map_grad_median(gradients):
     temp[np.where(temp > median)] = 255
     return temp, func_name
 
+def heatmap(gradients):
+  temp = intensity_map(gradients=gradients)[0].astype('uint8')
+  return cv2.applyColorMap(temp, cv2.COLORMAP_JET), "heatmap"
+
+# def squared_intensity_map(gradients):
+#     func_name = "squared_intensity_map"
+#     temp = np.abs(gradients)
+#     temp = temp * temp
+#     high = np.amax(temp)
+#     temp = (temp / high) * 255
+#     return temp, func_name
+
 # def binary_map_grad_upper_quartile(gradients):
 #     func_name = "binary_map_grad_upper_quartile"
 #     temp = np.abs(gradients)
 #     median = np.median(temp[temp>0])
 #     temp[np.where(temp > median)] = 255
 #     return temp, func_name
-
-def heatmap(gradients):
-  temp = intensity_map(gradients=gradients)[0].astype('uint8')
-  return cv2.applyColorMap(temp, cv2.COLORMAP_JET), "heatmap"
 
 
 #trans_funcs is a list of transformation functions
@@ -132,7 +132,7 @@ def main(revised=True):
         os.mkdir(output_dir)
 
     #initialize trans_funcs
-    tran_funcs = [binary_map, intensity_map, squared_intensity_map, binary_map_grad_median, heatmap]
+    tran_funcs = [binary_map, intensity_map, binary_map_grad_median, heatmap]
 
     for file_path in input_file_paths:
         img_dir = "{}/{}".format(output_dir, ntpath.basename(file_path))
