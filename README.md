@@ -1,6 +1,8 @@
 # CS6220-group-3-class-project
 Adapted from https://colab.research.google.com/drive/1vLDuyInQF1_liK5B57KktAaXqKZd9h5Q?usp=sharing
 
+From sanmesh: https://docs.google.com/document/d/1SoxOGzWRvyrBa-HIDbG5a58zAIBUguxS/edit 
+
 ## Overview
 
 Runs age detection on faces within a given image. Once a face has been classified, a number of different saliency maps are computed for each face and saved locally. 
