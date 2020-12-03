@@ -1,6 +1,7 @@
 # CS6220-group-3-class-project
 - Colab (Model Training) Readme: https://docs.google.com/document/d/1XOQLcO3aaSrhjBngnoor1x7df0JBhkzD/edit
 - GUI Repo: https://github.com/jpleo122/age-detector-saliency/tree/master/saliency
+- Final report link: https://docs.google.com/presentation/d/1RWn3s7SzKMSHKJCnLVaogtSZTPfr4tB6alrIIgTP_Yw/edit?usp=sharing
 
 ## Overview
 
