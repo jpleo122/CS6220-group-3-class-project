@@ -1,7 +1,7 @@
 # CS6220-group-3-class-project
 Adapted from https://colab.research.google.com/drive/1vLDuyInQF1_liK5B57KktAaXqKZd9h5Q?usp=sharing
 
-From sanmesh: https://docs.google.com/document/d/1SoxOGzWRvyrBa-HIDbG5a58zAIBUguxS/edit 
+From sanmesh: https://docs.google.com/document/d/1XOQLcO3aaSrhjBngnoor1x7df0JBhkzD/edit
 
 ## Overview
 
