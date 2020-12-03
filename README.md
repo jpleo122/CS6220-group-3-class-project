@@ -15,7 +15,7 @@ One can install the requirements in requirements.txt by running `python -m pip -
 
 Put input images in ./input folder 
 
-Run  `python saliency.py`
+Run  `python saliency_map.py`
 
 See output in ./output
 
